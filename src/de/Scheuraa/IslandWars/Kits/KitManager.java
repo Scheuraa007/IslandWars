@@ -26,6 +26,9 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
+import org.bukkit.inventory.meta.PotionMeta;
+import org.bukkit.potion.PotionData;
+import org.bukkit.potion.PotionType;
 import org.bukkit.scoreboard.Team;
 
 import de.NeonnBukkit.CoinsAPI.API.CoinsAPI;
@@ -109,6 +112,28 @@ public class KitManager implements Listener {
 
 		kits.add(new KitAssasine("§bAssasine", "§7Gutes Schwert aber schlechte Rüstung.", 30000, Material.DIAMOND_SWORD,
 				startAssasine, helmass, brustass, hoseass, schiheass));
+		
+		
+		List<ItemStack> startTank = new ArrayList<ItemStack>();
+		ItemStack potion = new ItemStack(Material.POTION);
+		PotionMeta potionmeta = (PotionMeta) potion.getItemMeta();
+		potionmeta.setBasePotionData(new PotionData(PotionType.FIRE_RESISTANCE, true, false));
+		potion.setItemMeta(potionmeta);
+		startTank.add(potion);
+		
+		ItemStack helmTank = new ItemStack(Material.IRON_HELMET);
+		helmTank.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
+		
+		ItemStack bruTank = new ItemStack(Material.DIAMOND_CHESTPLATE);
+		bruTank.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
+		
+		ItemStack legTank = new ItemStack(Material.IRON_LEGGINGS);
+		legTank.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
+		
+		ItemStack schuhTank = new ItemStack(Material.DIAMOND_BOOTS);
+		schuhTank.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 1);
+		
+		kits.add(new KitTank("§bTank", "§7Gut equipt von Anfang an", 60000, Material.DIAMOND_CHESTPLATE, startTank, helmTank, bruTank, legTank, schuhTank));
 	}
 
 	@EventHandler
