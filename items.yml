@@ -1,0 +1,27 @@
+#Possible Enchantments are: ARROW_DAMAGE, ARROW_FIRE, ARROW_INFINITE, ARROW_KNOCKBACK, BINDING_CURSE, CHANNELING
+#DAMAGE_ALL, DAMAGE_ARTHROPODS, DAMAGE_UNDEAD, DEPTH_STRIDER, DIG_SPEED, DURABILITY, FIRE_ASPECT, FROST_WALKER,
+#IMPALING, KNOCKBACK, LOOT_BONUS_BLOCKS, LOOT_BONUS_MOBS, LOYALTY, LUCK, LURE, MENDING, MULTISHOT, OXYGEN, PIERCING,
+#PROTECTION_ENVIRONMENTAL, PROTECTION_EXPLOSIONS, PROTECTION_FALL, PROTECTION_FIRE, PROTECTION_PROJECTILE, QUICK_CHARGE,
+#RIPTIDE, SILK_TOUCH, SWEEPING_EDGE, THORNS, VANISHING_CURSE, WATER_WORKER
+
+#You can also look here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html
+
+#MinecraftName-MINItems-MAXItems-PROBABILITY%EnchantmentName:EnchantmentHeight
+items: 
+  - IRON_SWORD-1-1-1%DAMAGE_ALL:1
+  - APPLE-1-10-3
+  - BREAD-2-5-2
+
+#PotionTypes: AWKWARD, FIRE_RESISTANCE, INSTANT_DAMAGE, INSTANT_HEAL, INVISIBILITY, JUMP, LUCK, MUNDANE, NIGHT_VISION,
+#POISON, REGEN, SLOW_FALLING, SLOWNESS, SPEED, STRENGTH, THICK, TURTLE_MASTER, WATER, WATER_BREATHING, WEAKNESS
+
+#You can also look here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionType.html            
+#Extended and Upgraded can only be true or false
+
+#PotionType-MinItems-MaxItems-Probability%Extended%Upgraded  
+splash_potions:
+  - SPEED-1-1-1%false%true
+potions:
+  - SPEED-1-1-1%false%true
+lingering_potions:
+  - SPEED-1-1-1%false%true

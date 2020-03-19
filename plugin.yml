@@ -1,0 +1,16 @@
+main: de.Scheuraa.IslandWars.Main.Main
+version: 1.0
+name: IslandWars
+author: Scheuraa
+api-version: 1.13
+softdepend: [PlaceholderAPI]
+commands:
+     start:
+          description: Beschleunigt den Spielstart!    
+     setspawn:
+          description: Setze diverse Spawnpunkte!
+     stats: 
+          description: Zeigt die Stats eines Spielers!
+     addcoins: 
+          description: Addet Coins!
+ 
